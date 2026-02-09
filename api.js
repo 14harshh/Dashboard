@@ -47,12 +47,15 @@ async function fetchTasks() {
     loader.textContent = "";
     ActiveTasks.textContent = tasks.length
 
-    tasks.slice(0, 10).forEach(task => {
+    tasks.slice(0, 20).forEach(task => {
       const card = document.createElement("div");
       card.className = "task-card";
       card.innerHTML = `
-        <span>${task.completed ? " Completed" : " Pending"}</span>
+        <span>${task.completed ? " Completed.." : " Pending..."}</span>
         <p>${task.title}</p>
+        
+        <button class="complete-btn">Complete</button>
+        <button class="delete-btn">Delete</button>
       `;
       tasksContainer.appendChild(card);
     });
@@ -69,4 +72,17 @@ usersLink.addEventListener("click", e => {
 tasksLink.addEventListener("click", e => {
   e.preventDefault();
   fetchTasks();
+});
+document.addEventListener("click", function (e) {
+
+  if (e.target.classList.contains("complete-btn")) {
+    const task = e.target.parentElement;
+    task.classList.add("completed");
+    
+  }
+
+  if (e.target.classList.contains("delete-btn")) {
+    const task = e.target.parentElement;
+    task.remove();
+  }
 });
