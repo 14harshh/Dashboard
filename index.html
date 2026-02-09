@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Task</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Dashboard</h1>
+ <span class="user">Logged in as User</span>
+ <span class="Tasks">Logged in as Tasks</span>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="usersLink">Users</a></li>
+        <li><a href="#" id="TasksLink">Tasks</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main">
+   
+    <div class="card">
+      <h2>Total Users</h2>
+      <p id="totalUsers">0</p>
+    </div>
+
+    <div class="card">
+      <h2>Active Tasks</h2>
+      <p id="ActiveTasks">0</p>
+    </div>
+
+    <div class="card">
+      <h2>Server Status</h2>
+      <p>Online</p>
+    </div>
+
+   
+    <div class="users-section">
+      <h3>Users</h3>
+      <p id="loader"></p>
+      <div id="users"></div>
+      </div>
+
+      <div class="tasks-section">
+       <h3>Tasks</h3>
+       <p id="Loader"></p>
+       <div id="tasks"></div>
+       </div>
+       
+      <script src="api.js"></script>
+</body>
+</html>
+
