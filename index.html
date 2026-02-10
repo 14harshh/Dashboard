@@ -2,63 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Task</title>
+  <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-  <h1>Dashboard</h1>
- <span class="user">Logged in as User</span>
- <span class="Tasks">Logged in as Tasks</span>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Dashboard </h1>
+    <span class="user">Logged in as User</span>
+  </header>
 
-<div class="layout">
+  <div class="layout">
 
-  <aside class="sidebar">
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#" id="usersLink">Users</a></li>
-        <li><a href="#" id="TasksLink">Tasks</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </nav>
-  </aside>
-  
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" id="usersLink">Users</a></li>
+          <li><a href="#" id="tasksLink">Tasks</a></li>
 
-  <main class="main">
-   
-    <div class="card">
-      <h2>Total Users</h2>
-      <p id="totalUsers">0</p>
-    </div>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <div class="card">
-      <h2>Active Tasks</h2>
-      <p id="ActiveTasks">0</p>
-    </div>
+    <!-- MAIN -->
+    <main class="main">
 
-    <div class="card">
-      <h2>Server Status</h2>
-      <p>Online</p>
-    </div>
-
-   
-    <div class="users-section">
-      <h3>Users</h3>
-      <p id="loader"></p>
-      <div id="users"></div>
+      <div class="card">
+        <h2>total Users</h2>
+        <p id="totalUsers">0</p>
+      </div>
+     
+      <div class="card">
+        <h2>Active Tasks</h2>
+        <p id="ActiveTasks">0</p>
       </div>
 
-      <div class="tasks-section">
-       <h3>Tasks</h3>
-       <p id="Loader"></p>
-       <div id="tasks"></div>
-       </div>
+      <div class="card">
+        <h2>Server Status</h2>
+        <p>Online</p>
+      </div>
 
-<script src="api.js"></script>
+    <div class="users-section" id="usersSection" style="display:none;">
+  <h3>Users</h3>
+  <p id="loader"></p>
+  <div id="users"></div>
+</div>
 
+<div class="tasks-section" id="tasksSection" style="display:none;">
+  <h3>Tasks</h3>
+  <p id="loader"></p>
+  <div id="tasks"></div>
+</div>
+
+  <script src="state.js"></script>
+  <script src="api.js"></script>
+  <script src="render.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
-
