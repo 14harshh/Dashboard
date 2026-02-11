@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard - Day 9</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>Dashboard </h1>
-    <span class="user">Logged in as User</span>
-  </header>
+<header class="header">
+  <h1>Admin Dashboard</h1>
+</header>
 
-  <div class="layout">
+<div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#" id="usersLink">Users</a></li>
-          <li><a href="#" id="tasksLink">Tasks</a></li>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="usersLink">Users</a></li>
+        <li><a href="#" id="tasksLink" >Tasks</a></li>
+        <li><a href="#">Setting</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-          <li><a href="#">Settings</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <main class="main">
 
-    <!-- MAIN -->
-    <main class="main">
+    <p id="loader" class="loader"></p>
 
+    <div class="stats">
       <div class="card">
-        <h2>total Users</h2>
+        <h3>Total Users</h3>
         <p id="totalUsers">0</p>
       </div>
-     
-      <div class="card">
-        <h2>Active Tasks</h2>
-        <p id="ActiveTasks">0</p>
-      </div>
 
       <div class="card">
-        <h2>Server Status</h2>
-        <p>Online</p>
+        <h3>Active Tasks</h3>
+        <p id="activeTasks">0</p>
       </div>
+    </div>
 
-    <div class="users-section" id="usersSection" style="display:none;">
-  <h3>Users</h3>
-  <p id="loader"></p>
-  <div id="users"></div>
+    <div class="task-controls">
+      <input type="text" id="searchInput" placeholder="Search tasks..." />
+      <button data-filter="all">All</button>
+      <button data-filter="completed">Completed</button>
+      <button data-filter="pending">Pending</button>
+    </div>
+
+    <section id="usersSection" style="display:none;">
+      <h2>Users</h2>
+      <div id="users" class="grid"></div>
+    </section>
+
+    <section id="tasksSection" style="display:none;">
+      <h2>Tasks</h2>
+      <div id="tasks" class="grid"></div>
+    </section>
+
+  </main>
 </div>
 
-<div class="tasks-section" id="tasksSection" style="display:none;">
-  <h3>Tasks</h3>
-  <p id="loader"></p>
-  <div id="tasks"></div>
-</div>
+<script src="state.js"></script>
+<script src="api.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
 
-  <script src="state.js"></script>
-  <script src="api.js"></script>
-  <script src="render.js"></script>
-  <script src="app.js"></script>
 </body>
 </html>

@@ -1,21 +1,16 @@
 async function fetchUsers() {
-  try {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/users"
-    );
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch users");
-    }
-
-    return await response.json();
-  } catch (error) {
-    throw error;
+  if (!response.ok) {
+    throw new Error("Failed to fetch users");
   }
+
+  return response.json();
 }
 
 async function fetchTasks() {
-  try {
   const response = await fetch(
     "https://jsonplaceholder.typicode.com/todos"
   );
@@ -24,9 +19,5 @@ async function fetchTasks() {
     throw new Error("Failed to fetch tasks");
   }
 
-  return await response.json();
-} catch (error) {
-  throw error;
-}
-
+  return response.json();
 }
