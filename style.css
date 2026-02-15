@@ -107,3 +107,21 @@ button {
   display: flex;
   gap: 10px;
 }
+.error {
+  padding: 20px;
+  background-color: #ffe6e6;
+  color: #d8000c;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.empty {
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #555;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+  font-style: italic;
+}

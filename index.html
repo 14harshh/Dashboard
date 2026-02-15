@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header class="header">
   <h1>Admin Dashboard</h1>
 </header>
@@ -38,14 +37,19 @@
         <h3>Active Tasks</h3>
         <p id="activeTasks">0</p>
       </div>
+       
+      <div class="controls">
+        <button id="usersBtn"></button>
+        <button id="tasksBtn"></button>
+      </div>
     </div>
-
     <div class="task-controls">
       <input type="text" id="searchInput" placeholder="Search tasks..." />
       <button data-filter="all">All</button>
       <button data-filter="completed">Completed</button>
       <button data-filter="pending">Pending</button>
     </div>
+    <div id="statusMessage"></div>
 
     <section id="usersSection" style="display:none;">
       <h2>Users</h2>

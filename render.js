@@ -2,9 +2,41 @@ const usersContainer = document.getElementById("users");
 const tasksContainer = document.getElementById("tasks");
 const totalUsers = document.getElementById("totalUsers");
 const activeTasks = document.getElementById("activeTasks");
+const statusMessage = document.getElementById("statusMessage");
+
+function showLoading(message) {
+  statusMessage.innerHTML = `<p class="loading">${message}</p>`;
+}
+function showError(message) {
+  statusMessage.innerHTML = `
+    <div class="error-card">
+      <h3>⚠ Error</h3>
+      <p>${message}</p>
+    </div>
+  `;
+}
+
+function showEmpty(message) {
+  statusMessage.innerHTML = `
+    <div class="empty-card">
+      <p>${message}</p>
+    </div>
+  `;
+}
+
+function clearStatus() {
+  statusMessage.innerHTML = "";
+}
+
 
 function renderUsers() {
   usersContainer.innerHTML = "";
+  if (users.length === 0) {
+    showEmpty("No users found.");
+    return;
+  }
+
+  clearStatus();
 
   users.forEach(user => {
     const card = document.createElement("div");
@@ -24,6 +56,13 @@ function renderUsers() {
 
 function renderTasks() {
   tasksContainer.innerHTML = "";
+
+ if (tasks.length === 0) {
+    showEmpty("No tasks available.");
+    return;
+  }
+
+  clearStatus();
 
   activeTasks.textContent = tasks.filter(t => !t.completed).length;
 

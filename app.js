@@ -6,30 +6,22 @@ const loader = document.getElementById("loader");
 const searchInput = document.getElementById("searchInput");
 const filterButtons = document.querySelectorAll(".task-controls button");
 
-usersLink.addEventListener("click", async (e) => {
-  e.preventDefault();
-
-  usersSection.style.display = "block";
-  tasksSection.style.display = "none";
-
+async function loadUsers() {
+  showLoading("Loading users...");
   loader.textContent = "Loading users...";
 
   try {
     users = await fetchUsers();
     renderUsers();
     loader.textContent = "";
-  } catch {
-    loader.textContent = "Failed to load users";
+  } catch  (error){
+    showError("Failed to load users");
   }
-});
+}
 
-tasksLink.addEventListener("click", async (e) => {
-  e.preventDefault();
-
-  tasksSection.style.display = "block";
-  usersSection.style.display = "none";
-
-  loader.textContent = "Loading tasks...";
+async function loadTasks() {
+  showLoading("Loading tasks...");
+  loader.textContent = "Loading tasks..."
 
   try {
     if (users.length === 0) {
@@ -39,10 +31,26 @@ tasksLink.addEventListener("click", async (e) => {
     tasks = await fetchTasks();
     renderTasks();
     loader.textContent = "";
-  } catch {
-    loader.textContent = "Failed to load tasks";
+  } catch (error) {
+    showError("Failed to load tasks");
   }
+}
+
+usersLink.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  usersSection.style.display = "block";
+  tasksSection.style.display = "none";
+  await loadUsers();
 });
+
+  tasksLink.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  tasksSection.style.display = "block";
+  usersSection.style.display = "none";
+  await loadTasks();
+  });
 
 document.addEventListener("click", function (e) {
 
@@ -71,11 +79,3 @@ filterButtons.forEach(button => {
     renderTasks();
   });
 });
-
-async function init() {
-  users = await fetchUsers();
-  tasks = await fetchTasks();
-  renderTasks();
-}
-
-init();
