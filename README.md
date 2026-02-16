@@ -1,4 +1,7 @@
 # Project Name
+Admin Dashboard
+
+# Overview
 The  Dashboard is a web-based application that fetches users and their tasks from a public API and displays them in a structured and professional dashboard layout.
 
 The project demonstrates:
@@ -47,9 +50,7 @@ This project uses the free public API provided by:
 
 1️ Users API
 
-Endpoint:
-
-https://jsonplaceholder.typicode.com/users
+Endpoint:https://jsonplaceholder.typicode.com/users
 
 
 Purpose:
@@ -62,10 +63,7 @@ Map tasks to users using userId
 
 2️ Tasks API
 
-Endpoint:
-
-https://jsonplaceholder.typicode.com/todos
-
+Endpoint:https://jsonplaceholder.typicode.com/todos
 
 Purpose:
 
