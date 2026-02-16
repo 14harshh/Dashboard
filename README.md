@@ -59,13 +59,13 @@ project-folder/
 └── app.js         # Application logic
 
  # Setup Steps
-Option 1: Run Directly in Browser,
-Download or clone the project,
-Keep all files inside the same folder,
+Option 1: Run Directly in Browser ->
+Download or clone the project ->
+Keep all files inside the same folder ->
 Open index.html in your browser.
 
-Option 2: Using VS Code Live Server, 
-Open the project folder in VS Code,
-Install Live Server extension,
-Right-click index.html,
+Option 2: Using VS Code Live Server ->
+Open the project folder in VS Code ->
+Install Live Server extension ->
+Right-click index.html ->
 Click Open with Live Server.
