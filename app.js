@@ -5,6 +5,7 @@ const tasksSection = document.getElementById("tasksSection");
 const loader = document.getElementById("loader");
 const searchInput = document.getElementById("searchInput");
 const filterButtons = document.querySelectorAll(".task-controls button");
+const themeBtn = document.getElementById("themeToggle");
 
 async function loadUsers() {
   showLoading("Loading users...");
@@ -78,4 +79,21 @@ filterButtons.forEach(button => {
     currentFilter = button.dataset.filter;
     renderTasks();
   });
+});
+
+if (localStorage.getItem("theme") == "dark") {
+  document.body.classList.add("dark");
+  themeBtn.textContent = "Light Mode";
+}
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    themeBtn.textContent = "Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    themeBtn.textContent = "Dark Mode";
+  }
 });
