@@ -5,24 +5,24 @@ Admin Dashboard
 The  Dashboard is a web-based application that fetches users and their tasks from a public API and displays them in a structured and professional dashboard layout.
 
 The project demonstrates:
-API integration,
-State management,
-Task-to-user mapping,
-Error handling,
-Clean UI structure,
+API integration, 
+State management, 
+Task-to-user mapping, 
+Error handling, 
+Clean UI structure, 
 This project is built using HTML, CSS, and JavaScript.
 
 # Features
-Structured layout (Header, Sidebar, Main Area),
-Fetch users from API,
-Fetch tasks from API,
-Map tasks to their respective users,
-Display total users count,
-Display active tasks count,
-Visual status indicators (Completed / Pending),
-Loading indicator while fetching data,
-Error handling using try/catch,
-Empty state handling,
+Structured layout (Header, Sidebar, Main Area), 
+Fetch users from API, 
+Fetch tasks from API, 
+Map tasks to their respective users, 
+Display total users count, 
+Display active tasks count, 
+Visual status indicators (Completed / Pending), 
+Loading indicator while fetching data, 
+Error handling using try/catch, 
+Empty state handling, 
 Modular file structure.
 
  # APIs Used
@@ -34,8 +34,8 @@ This project uses the free public API provided by:
 Endpoint:https://jsonplaceholder.typicode.com/users
 
 Purpose:
-Fetch user details,
-Display user list,
+Fetch user details, 
+Display user list, 
 Map tasks to users using userId.
 
 2️ Tasks API
@@ -43,9 +43,9 @@ Map tasks to users using userId.
 Endpoint:https://jsonplaceholder.typicode.com/todos
 
 Purpose:
-Fetch tasks,
-Show task title,
-Display task completion status,
+Fetch tasks, 
+Show task title, 
+Display task completion status, 
 Count active tasks.
 
 # Project Structure
@@ -59,13 +59,13 @@ project-folder/
 └── app.js         # Application logic
 
 # Feature Extenstion
-dark Mode
-use inside the body themetoggle button
-click the Light mode it gets the light mode
-click the same button its gets the dark mode
-add body.dark in css
-.root is a light mode
-it shows the dashboard
+dark Mode:
+use inside the body themetoggle button, 
+click the Light mode it gets the light mode, 
+click the same button its gets the dark mode, 
+add body.dark in css, 
+.root is a light mode, 
+it shows the dashboard.
 
  # Setup Steps
 Option 1: Run Directly in Browser ->
