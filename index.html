@@ -45,22 +45,26 @@
       </div>
     </div>
     <div class="task-controls">
-      <input type="text" id="searchInput" placeholder="Search tasks..." />
-      <button data-filter="all">All</button>
-      <button data-filter="completed">Completed</button>
-      <button data-filter="pending">Pending</button>
+    
     </div>
     <div id="statusMessage"></div>
 
     <section id="usersSection" style="display:none;">
       <h2>Users</h2>
       <div id="users" class="grid"></div>
-    </section>
+   </section>
 
     <section id="tasksSection" style="display:none;">
       <h2>Tasks</h2>
-      <div id="tasks" class="grid"></div>
-    </section>
+      <input type="text" id="searchInput" placeholder="Search task.." />
+
+    <div class="task-controls">
+      <button data-filter="all">All</button>
+      <button data-filter="completed">Completed</button>
+      <button data-filter="pending">Pending</button>
+    </div>
+    <div id="tasks" class="grid"></div>
+   </section>
 
   </main>
 </div>

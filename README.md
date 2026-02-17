@@ -1,5 +1,5 @@
 # Project Name
-Admin Dashboard
+Dashboard
 
 # Overview
 The  Dashboard is a web-based application that fetches users and their tasks from a public API and displays them in a structured and professional dashboard layout.
@@ -69,7 +69,7 @@ it shows the dashboard.
 
 # Deployment
 Deploy app: Vercel. 
-Live URL:https://vercel.com/14harshhs-projects/dashboard
+Live URL:https://admin-dashboard-psi-henna.vercel.app
 
  # Setup Steps
 Option 1: Run Directly in Browser ->

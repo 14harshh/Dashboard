@@ -12,7 +12,7 @@ async function fetchUsers() {
 
 async function fetchTasks() {
   const response = await fetch(
-    "https://jsonplaceholder.typicode.com/todos"
+    "https://jsonplaceholder.typicode.com/todos?_limit=20"
   );
 
   if (!response.ok) {

@@ -10,7 +10,7 @@ function showLoading(message) {
 function showError(message) {
   statusMessage.innerHTML = `
     <div class="error-card">
-      <h3>⚠ Error</h3>
+      <h3>Error</h3>
       <p>${message}</p>
     </div>
   `;
@@ -31,10 +31,6 @@ function clearStatus() {
 
 function renderUsers() {
   usersContainer.innerHTML = "";
-  if (users.length === 0) {
-    showEmpty("No users found.");
-    return;
-  }
 
   clearStatus();
 
@@ -56,11 +52,6 @@ function renderUsers() {
 
 function renderTasks() {
   tasksContainer.innerHTML = "";
-
- if (tasks.length === 0) {
-    showEmpty("No tasks available.");
-    return;
-  }
 
   clearStatus();
 
@@ -87,7 +78,7 @@ function renderTasks() {
     return;
   }
 
-  filteredTasks.slice(0, 20).forEach(task => {
+  filteredTasks.forEach(task => {
     const owner = users.find(u => u.id === task.userId);
     const username = owner ? owner.username : "Unknown";
 

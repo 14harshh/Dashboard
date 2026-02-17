@@ -10,14 +10,15 @@ const themeBtn = document.getElementById("themeToggle");
 async function loadUsers() {
   showLoading("Loading users...");
   loader.textContent = "Loading users...";
-
-  try {
+   try {
     users = await fetchUsers();
     renderUsers();
     loader.textContent = "";
   } catch  (error){
     showError("Failed to load users");
   }
+
+
 }
 
 async function loadTasks() {
