@@ -67,6 +67,10 @@ add body.dark in css,
 .root is a light mode, 
 it shows the dashboard.
 
+# Deployment
+Deploy app: Vercel. 
+Live URL:https://vercel.com/14harshhs-projects/dashboard
+
  # Setup Steps
 Option 1: Run Directly in Browser ->
 Download or clone the project ->
